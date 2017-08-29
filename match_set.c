@@ -1,12 +1,7 @@
 /*
-   match_set.c
-   
    This program calculates all sums of the numbers in one value set (x)
    and compares each sum with the numbers in another value set (y).
    The purpose is to find all sums that matches.
-
-   Compiled with 'gcc -o match_set match_set.c' and tested with
-   different values in x and y.
 */
 
 #include <stdio.h>
@@ -67,7 +62,7 @@ int main( int argc, char *argv[] ) {
     printf("\b\b  \n");
     printf("--- Please wait, calculating sums...\n");
 
-    /*  Loop through the first value set.  */
+    /*  Loop through the first value set and check for matches in second value set. */
     for ( nx = 0; nx < X; nx++ ) {
         sum = x[nx];
         sprintf( sum_string, "x[%d]", nx+1 );
@@ -83,8 +78,6 @@ int main( int argc, char *argv[] ) {
             }
         }
     }
-    printf("--- ...done! Found %d matches.", number_of_matches );
-
+    printf("--- ...done! Found %d matches.\n", number_of_matches );
+    return 0;
 }
-
-
