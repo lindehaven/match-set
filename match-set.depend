@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1503993868 source:c:\users\lindtlar\documents\github\match-set\match_set.c
+	<stdio.h>
+	<string.h>
+	<math.h>
+
+1504277775 source:c:\users\lindtlar\documents\github\match-set\src\match_set.c
+	<stdio.h>
+	<string.h>
+	<math.h>
+

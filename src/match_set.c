@@ -60,7 +60,7 @@ int main( int argc, char *argv[] ) {
     for ( nx = 0; nx < Y; nx++ )
         printf("y[%d]=%.2f, ", nx+1, y[nx] );
     printf("\b\b  \n");
-    printf("--- Please wait, calculating sums...\n");
+    printf("--- Searching for matches ...\n");
 
     /*  Loop through the first value set and check for matches in second value set. */
     for ( nx = 0; nx < X; nx++ ) {
@@ -78,6 +78,7 @@ int main( int argc, char *argv[] ) {
             }
         }
     }
-    printf("--- ...done! Found %d matches.\n", number_of_matches );
-    return 0;
+    printf("--- Done! Found %d matches.\n", number_of_matches );
+
+    return number_of_matches;
 }
