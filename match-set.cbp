@@ -28,12 +28,22 @@
 				</Linker>
 			</Target>
 		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Debug;Release;" />
+		</VirtualTargets>
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<ExtraCommands>
+			<Add after='cmd /c &quot;cd test &amp; RunAllTests.bat&quot;' />
+			<Mode after="always" />
+		</ExtraCommands>
 		<Unit filename="src/match_set.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/RunAllTests.bat" />
+		<Unit filename="test/test_set_x.txt" />
+		<Unit filename="test/test_set_y.txt" />
 		<Extensions>
 			<code_completion />
 			<envvars />
